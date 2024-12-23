@@ -45,9 +45,9 @@ if (isset($_GET['id'])) {
             <label>Membership Type:</label>
             <!-- Dropdown untuk memilih jenis membership -->
             <select name="membership_type">
-                <option value="bronze" <?= isset($membership) && $membership['membership_type'] == 'bronze' ? 'selected' : ''; ?>>Bronze</option>
-                <option value="silver" <?= isset($membership) && $membership['membership_type'] == 'silver' ? 'selected' : ''; ?>>Silver</option>
-                <option value="gold" <?= isset($membership) && $membership['membership_type'] == 'gold' ? 'selected' : ''; ?>>Gold</option>
+                <option value="Bronze" <?= isset($membership) && $membership['membership_type'] == 'Bronze' ? 'selected' : ''; ?>>Bronze</option>
+                <option value="Silver" <?= isset($membership) && $membership['membership_type'] == 'Silver' ? 'selected' : ''; ?>>Silver</option>
+                <option value="Gold" <?= isset($membership) && $membership['membership_type'] == 'Gold' ? 'selected' : ''; ?>>Gold</option>
             </select>
             <label>Membership Code:</label>
             <!-- Input untuk kode membership yang tidak dapat diubah -->

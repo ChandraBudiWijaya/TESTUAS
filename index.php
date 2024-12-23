@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+// Memeriksa apakah pengguna sudah login
+if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+    // Redirect ke halaman dashboard jika sudah login
+    header("Location: ../../views/dashboard.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
