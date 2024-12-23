@@ -53,7 +53,12 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
             </form>
         </div>
     </div>
-
+    <!-- Footer -->
+    <footer>
+       <p>&copy; 2024 Anugerah Motor | Chandra Budi Wijaya 122140093</p>
+   </footer>
+    
+    
     <script>
         // Fungsi untuk toggle menu navigasi
         function toggleMenu() {
@@ -64,7 +69,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Mencegah form dari submit default
             var form = this;
-
+            
             // Mengirim data form menggunakan fetch API
             fetch(form.action, {
                 method: form.method,

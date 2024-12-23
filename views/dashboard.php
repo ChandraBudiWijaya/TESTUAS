@@ -49,7 +49,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Anugerah Motor</p>
+        <p>&copy; 2024 Anugerah Motor | Chandra Budi Wijaya 122140093</p>
     </footer>
 
     <!-- JavaScript -->

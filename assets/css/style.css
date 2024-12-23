@@ -148,21 +148,6 @@ footer {
     bottom: 0;
 }
 
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.footer-links a {
-    color: #aaaaaa;
-    font-size: 0.9rem;
-}
-
-.footer-links a:hover {
-    color: #ffffff;
-}
-
 footer p {
     font-size: 0.8rem;
     color: #888888;
