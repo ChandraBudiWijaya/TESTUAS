@@ -1,4 +1,4 @@
-# TESTUAS - Sistem Informasi Inventori dan Keanggotaan
+# TESTUAS - Sistem Informasi Inventori dan Keanggotaan Anugerah Motor
 ### Identitas
 - Nama: CHANDRA BUDI WIJAYA
 - NIM: 122140093
