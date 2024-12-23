@@ -6,8 +6,8 @@
 - Mata Kuliah: PEMROGRAMAN WEB RA
 
 # info Login
-## *Username:* admin
-## *Password:* password123
+- *Username:* admin
+- *Password:* password123
 
 ## Struktur Folder
 ```
