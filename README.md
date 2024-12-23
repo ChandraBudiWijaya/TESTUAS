@@ -5,6 +5,9 @@
 - NIM: 122140093
 - Mata Kuliah: PEMROGRAMAN WEB RA
 
+# Username: admin
+# Password: password123
+
 ## Struktur Folder
 ```
 TESTUAS/
