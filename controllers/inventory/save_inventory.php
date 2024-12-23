@@ -10,7 +10,6 @@ $conn = $db->getConnection(); // Mendapatkan koneksi ke database
 // Memeriksa apakah metode request adalah POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = isset($_POST['id']) ? intval($_POST['id']) : null; // Mendapatkan ID jika ada
-    $item_code = $_POST['item_code']; // Mendapatkan kode item dari form
     $item_name = $_POST['item_name']; // Mendapatkan nama item dari form
     $quantity = $_POST['quantity']; // Mendapatkan jumlah item dari form
     $category = $_POST['category']; // Mendapatkan kategori item dari form
@@ -18,10 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($id) {
         // Memperbarui item inventory yang sudah ada
-        $stmt = $conn->prepare("UPDATE inventory SET item_code = ?, item_name = ?, quantity = ?, category = ?, description = ? WHERE id = ?");
-        $stmt->bind_param("ssissi", $item_code, $item_name, $quantity, $category, $description, $id);
+        $stmt = $conn->prepare("UPDATE inventory SET item_name = ?, quantity = ?, category = ?, description = ? WHERE id = ?");
+        $stmt->bind_param("sissi", $item_name, $quantity, $category, $description, $id);
     } else {
         // Menambahkan item inventory baru
+        $item_code = $_POST['item_code']; // Mendapatkan kode item dari form
         $stmt = $conn->prepare("INSERT INTO inventory (item_code, item_name, quantity, category, description) VALUES (?, ?, ?, ?, ?)");
         $stmt->bind_param("ssiss", $item_code, $item_name, $quantity, $category, $description);
     }

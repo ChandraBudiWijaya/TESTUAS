@@ -49,11 +49,6 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
     <!-- Footer -->
     <footer>
-        <div class="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Help</a>
-        </div>
         <p>&copy; 2024 Anugerah Motor</p>
     </footer>
 

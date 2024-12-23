@@ -1,3 +1,21 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+include '../../config/Database.php';
+
+$db = new Database();
+$conn = $db->getConnection();
+
+if (isset($_GET['id'])) {
+    $id = intval($_GET['id']);
+    $stmt = $conn->prepare("SELECT * FROM inventory WHERE id = ?");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $part = $result->fetch_assoc();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +25,6 @@
     <link rel="stylesheet" href="../../assets/css/form.css">
 </head>
 <body>
-    <!-- Tombol untuk kembali ke daftar inventory -->
-    <a href="../../views/inventory/list.php" class="btn-back">&lt; Back</a>
     <div class="form-container">
         <div class="form-header">
             <h2>Add/Edit Part</h2>
@@ -18,8 +34,8 @@
             <!-- Input tersembunyi untuk menyimpan ID item -->
             <input type="hidden" name="id" value="<?= isset($part) ? $part['id'] : ''; ?>">
             <label>Item Code:</label>
-            <!-- Input untuk kode item -->
-            <input type="text" name="item_code" value="<?= isset($part) ? htmlspecialchars($part['item_code']) : ''; ?>" required>
+            <!-- Input untuk kode item dengan atribut readonly -->
+            <input type="text" name="item_code" value="<?= isset($part) ? htmlspecialchars($part['item_code']) : ''; ?>" disabled>
             <label>Item Name:</label>
             <!-- Input untuk nama item -->
             <input type="text" name="item_name" value="<?= isset($part) ? htmlspecialchars($part['item_name']) : ''; ?>" required>

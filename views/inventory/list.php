@@ -57,7 +57,7 @@ $items = $conn->query("SELECT * FROM inventory")->fetch_all(MYSQLI_ASSOC);
                                 <!-- Tombol untuk mengedit item -->
                                 <a href="../../views/inventory/edit.php?id=<?= $item['id']; ?>" class="btn-edit">Edit</a>
                                 <!-- Tombol untuk menghapus item dengan konfirmasi -->
-                                <a href="../../controllers/inventory/delete_item.php?id=<?= $item['id']; ?>" class="btn-delete" onclick="return confirm('Are you sure?')">Delete</a>
+                                <a href="../../controllers/inventory/delete_inventory.php?id=<?= $item['id']; ?>" class="btn-delete" onclick="return confirm('Are you sure?')">Delete</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
