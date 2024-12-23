@@ -148,7 +148,7 @@ TESTUAS/
    - Akses aplikasi melalui URL hosting dan lakukan pengujian fungsionalitas.
 
 ### Penyedia Hosting yang Dipilih
-- Saya menggunakan layanan hosting dari **Rumahweb.net**.
+- Saya menggunakan layanan hosting dari **Rumahweb.com**.
 - Subdomain yang saya gunakan adalah: [https://chandra-093.koling-dev.my.id](https://chandra-093.koling-dev.my.id).
 
 ### Keamanan Aplikasi
