@@ -1,4 +1,4 @@
-# Sistem Informasi Inventori dan Keanggotaan Anugerah Motor
+# Sistem Manajemen Inventori dan Keanggotaan Anugerah Motor
 
 ## Identitas
 - Nama: CHANDRA BUDI WIJAYA
