@@ -1,3 +1,7 @@
+CREATE DATABASE anugerah_motor;
+
+USE anugerah_motor;
+
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
@@ -6,16 +10,19 @@ CREATE TABLE users (
 
 CREATE TABLE inventory (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    part_name VARCHAR(100) NOT NULL,
-    stock INT NOT NULL,
+    item_code VARCHAR(50) NOT NULL,
+    item_name VARCHAR(100) NOT NULL,
+    quantity INT NOT NULL,
+    category VARCHAR(50) NOT NULL,
     description TEXT
 );
 
-CREATE TABLE memberships (
+CREATE TABLE members (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    membership_code VARCHAR(50) UNIQUE NOT NULL,
     name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     phone VARCHAR(15),
-    membership_type ENUM('bronze', 'silver', 'gold') DEFAULT 'bronze',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    membership_type VARCHAR(50) NOT NULL
 );
