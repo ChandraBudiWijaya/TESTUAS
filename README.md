@@ -137,7 +137,7 @@ TESTUAS/
    - Pastikan semua file aplikasi telah diuji secara lokal dan berjalan dengan baik.
    - Ekspor database dari `phpMyAdmin` atau alat serupa.
 2. **Pilih Penyedia Hosting**:
-   - Saya menggunakan layanan hosting dari **Rumahweb**.
+   - Saya menggunakan layanan Shared hosting dari **Rumahweb**.
 3. **Upload File Aplikasi**:
    - Gunakan **cPanel** atau **FileZilla** untuk mengunggah file aplikasi ke direktori public_html.
 4. **Konfigurasi Database**:
